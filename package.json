@@ -1,0 +1,23 @@
+{
+  "name": "backend-app-message",
+  "version": "0.0.1",
+  "description": "chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresmauricio/backend-app-message.git"
+  },
+  "author": "Andres Mauricio Acelas Arevalo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andresmauricio/backend-app-message/issues"
+  },
+  "homepage": "https://github.com/andresmauricio/backend-app-message#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
