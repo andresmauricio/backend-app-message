@@ -4,7 +4,8 @@ const controller = require('./controller');
 const route = express.Router();
 
 route.get('/', function (req, res) {
-    controller.getMessages()
+    const filterMessage = req.query.user || null;
+    controller.getMessages(filterMessage)
         .then((messageList) => {
             response.success(req, res, messageList, 200);
         })
@@ -22,6 +23,16 @@ route.post('/', function (req, res) {
             response.error(req, res, 'Informacion Invalida', 400)
         });
 
+});
+
+route.patch('/:id', function (req, res) {
+    controller.updateMessage(req.params.id, req.body.message)
+        .then((data) => {
+            response.success(req, res, data, 200);
+        })
+        .catch(e => {
+            response.error(req, res, 'Error Interno', 500, e);
+        });
 });
 
 
