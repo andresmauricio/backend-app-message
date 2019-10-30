@@ -3,7 +3,7 @@ const Model = require('./model');
 
 function addMessage (message) {
     const myMessage = new Model(message);
-    myMessage.save();
+    return myMessage.save();
 }
 
  function getMessage (filterUser) {
