@@ -10,4 +10,5 @@ exports.error = function (req, res, message, status, e) {
     error: message,
     message: ''
   });
+  console.log(e)
 }
